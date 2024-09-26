@@ -32,6 +32,8 @@ module Helloworld
 
       # Sends a greeting
       rpc :SayHello, ::Helloworld::HelloRequest, ::Helloworld::HelloReply
+      # Sends another greeting
+      rpc :SayHelloAgain, ::Helloworld::HelloRequest, ::Helloworld::HelloReply
       rpc :SayHelloStreamReply, ::Helloworld::HelloRequest, stream(::Helloworld::HelloReply)
       rpc :SayHelloBidiStream, stream(::Helloworld::HelloRequest), stream(::Helloworld::HelloReply)
     end
